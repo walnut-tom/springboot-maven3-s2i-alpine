@@ -1,15 +1,15 @@
-FROM alpine:3.6
+FROM alpine:3.6.2
 
 MAINTAINER Tobias Kaefer <tobias@tkaefer.de>
 
 LABEL io.k8s.description="Platform for building and running Spring Boot applications" \
 	io.k8s.display-name="Spring Boot Maven 3" \
 	io.openshift.expose-services="8080:http" \
-	io.openshift.tags="builder,java,java8,maven,maven3,springboot" \
+	io.openshift.tags="builder,java,java8,maven,maven3,spring-boot" \
 	io.openshift.s2i.destination="/opt/app" \
 	io.openshift.s2i.scripts-url=image:///usr/local/s2i
 
-ENV MAVEN_VERSION=3.5.0
+ENV MAVEN_VERSION=3.5.2
 ENV LANG C.UTF-8
 ENV JAVA_HOME /usr/lib/jvm/java-1.8-openjdk
 ENV PATH $PATH:/usr/lib/jvm/java-1.8-openjdk/jre/bin:/usr/lib/jvm/java-1.8-openjdk/bin
