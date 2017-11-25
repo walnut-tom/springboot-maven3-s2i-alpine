@@ -6,7 +6,6 @@ LABEL io.k8s.description="Platform for building and running Spring Boot applicat
 	io.k8s.display-name="Spring Boot Maven 3" \
 	io.openshift.expose-services="8080:http" \
 	io.openshift.tags="builder,java,java8,maven,maven3,spring-boot" \
-	io.openshift.s2i.destination="/opt/app" \
 	io.openshift.s2i.scripts-url=image:///usr/local/s2i
 
 ENV MAVEN_VERSION=3.5.2
